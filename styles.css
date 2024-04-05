@@ -37,7 +37,6 @@
 
 a {
   text-decoration: none;
-  outline: none;
 }
 
 p {
@@ -232,8 +231,8 @@ fieldset legend {
 }
 
 .menu__item {
-  margin-left: 17.5px;
-  margin-right: 17.5px;
+  margin-left: 18px;
+  margin-right: 18px;
 }
 
 .menu__link {
@@ -299,7 +298,7 @@ fieldset legend {
   display: inline-block;
   width: 2px;
   height: 12px;
-  border-left: 1.2px #929499 solid;
+  border-left: 1px #929499 solid;
   font-weight: bold;
   margin-left: 13px;
   margin-right: 8px;
@@ -567,7 +566,6 @@ fieldset legend {
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 50px;
-  outline: none;
 }
 
 .product-card__left {
