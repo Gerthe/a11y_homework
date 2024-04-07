@@ -23,9 +23,9 @@
 }
 
 :root {
-  --text-color-primary: #717b90;
+  --text-color-primary: #6e737b;
   --text-color-light: #5e626b;
-  --link-color-primary: #b4bac4;
+  --link-color-primary: #042f73;
   --border-color-primary: #1a1f29;
   --border-color-light: #cccccc;
   --brand-blue: #171c8f;
@@ -83,7 +83,6 @@ button {
   background: none;
   padding: 0;
   margin: 0;
-  outline: none;
 }
 
 button {
@@ -1085,4 +1084,19 @@ fieldset legend {
   margin-left: 4px;
   margin-right: 4px;
   margin-bottom: 8px;
+}
+
+.skip {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.skip:focus {
+  position: static;
+  width: auto;
+  height: auto;
 }

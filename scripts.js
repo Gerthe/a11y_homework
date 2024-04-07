@@ -3,7 +3,7 @@ window.addEventListener("DOMContentLoaded", () => {
   const formColorLabel = document.getElementById('productColorValue');
   inputsColor.forEach((input) => {
     input.addEventListener('change', (e) => {
-      formColorLabel.innerText = e.target.dataset.nameDisplay;
+      formColorLabel.innerText = e.target.getAttribute('aria-label');
     });
   });
 
@@ -55,6 +55,5 @@ window.addEventListener("DOMContentLoaded", () => {
   const showModal = (modalWindow) => {
     modalWindow.classList.add('show-modal');
   }
-
 
 })

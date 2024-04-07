@@ -10,6 +10,7 @@
 	<body>
 		<div class="main-grid">
 			<div class="header">
+				<a href="#skipLinkTarget" class="skip">Skip to main content</a>
 				<div class="container header__container">
 					<nav class="header__menu-main" aria-label="Primary">
 						<ul class="menu">
@@ -44,7 +45,7 @@
 				</div>
 			</div>
 
-			<main class="page-content">
+			<main class="page-content" aria-label="Main content">
 				<div class="container">
 					<nav aria-label="Breadcrumbs">
 						<ul class="breadcrumbs">
@@ -56,7 +57,7 @@
 							</li>
 							<li class="breadcrumbs__item breadcrumbs__item_active">
 								<span class="breadcrumbs__current">White unisex t-shirt</span>
-							</li>														
+							</li>
 						</ul>
 					</nav>
 
@@ -65,7 +66,7 @@
 							<h1 class="product-card__title" id="productName">White unisex t-shirt</h1>
 							<p class="product-card__price">EUR 40</p>
 							<p class="product-card__infolabel">Tax included</p>
-							<form class="product-card__form" action="#">
+							<form class="product-card__form">
 								<div class="product-card__parameter">
 									<label  for="productSize" class="product-card__label">Size</label>
 									<select class="product-size" id="productSize">
@@ -75,7 +76,7 @@
 										<option value="l">L</option>
 										<option value="xl">XL</option>
 									</select>
-									<a class="size-guide-link modal-target">Size Guide TODO</a>
+									<div><button class="size-guide-button modal-target">Size Guide</button></div>
 									<div class="modal">
 										<div class="modal-backdrop">
 											<div class="modal-body size-guide">
@@ -111,33 +112,33 @@
 								<fieldset class="product-card__parameter">
 									<legend class="product-card__label">Color<span aria-hidden="true"> - <span id="productColorValue">White</span></span></legend>
 									<ul class="input-group">
-										<li class="input-group__item">
-											<label class="input-radio">
-												<input class="input-radio__input" type="radio" name="product_color" data-name-display="White" value="white" checked aria-hidden="true">
+										<li class="input-group__item" tabindex="0">
+											<div class="input-radio">
+												<input class="input-radio__input" type="radio" name="product_color" aria-label="White" value="white" checked>
 												<span class="input-radio__visual input-radio-color">
 													<span class="input-radio-color__sample" style="background-color: #ffffff; border: 1px #cccccc solid;"></span>
 												</span>
-											</label>
+											</div>
 										</li>
-										<li class="input-group__item">
+										<li class="input-group__item" tabindex="0">
 											<label class="input-radio">
-												<input class="input-radio__input" type="radio" name="product_color" data-name-display="Black" value="black" aria-hidden="true">
+												<input class="input-radio__input" type="radio" name="product_color" aria-label="Black" value="black">
 												<span class="input-radio__visual input-radio-color">
 													<span class="input-radio-color__sample" style="background-color: #1a1f29;"></span>
 												</span>
 											</label>
 										</li>
-										<li class="input-group__item">
+										<li class="input-group__item" tabindex="0">
 											<label class="input-radio">
-												<input class="input-radio__input" type="radio" name="product_color" data-name-display="Gray" value="gray" aria-hidden="true">
+												<input class="input-radio__input" type="radio" name="product_color" aria-label="Gray" value="gray">
 												<span class="input-radio__visual input-radio-color">
 													<span class="input-radio-color__sample" style="background-color: #aeaeb0;"></span>
 												</span>
 											</label>
 										</li>
-										<li class="input-group__item">
+										<li class="input-group__item" tabindex="0">
 											<label class="input-radio">
-												<input class="input-radio__input" type="radio" name="product_color" data-name-display="Purple latte" value="purple">
+												<input class="input-radio__input" type="radio" name="product_color" aria-label="Purple latte" value="purple">
 												<span class="input-radio__visual input-radio-color">
 													<span class="input-radio-color__sample" style="background-color: #ba9be5;"></span>
 												</span>
@@ -145,7 +146,7 @@
 										</li>
 										<li class="input-group__item">
 											<label class="input-radio">
-												<input class="input-radio__input" type="radio" name="product_color" data-name-display="Color 1" value="color1" disabled aria-hidden="true">
+												<input class="input-radio__input" type="radio" name="product_color" aria-label="Color 1" value="color1" disabled>
 												<span class="input-radio__visual input-radio-color">
 													<span class="input-radio-color__sample" style="background-color: #e9a0a7;"></span>
 												</span>
@@ -153,20 +154,20 @@
 										</li>
 										<li class="input-group__item">
 											<label class="input-radio">
-												<input class="input-radio__input" type="radio" name="product_color" data-name-display="Color 2" value="color2" disabled aria-hidden="true">
+												<input class="input-radio__input" type="radio" name="product_color" aria-label="Color 2" value="color2" disabled >
 												<span class="input-radio__visual input-radio-color">
 													<span class="input-radio-color__sample" style="background-color: #f8cab1;"></span>
 												</span>
-											</label>												
+											</label>
 										</li>										
 									</ul>										
 								</fieldset>
 								<div class="product-card__parameter product-card__parameter_last">
 									<label for="productQuantity" class="product-card__label">Quantity</label>
 									<div class="input-quantity">
-										<button class="input-quantity__btn" data-action="decrease">&minus;</button>
+										<button class="input-quantity__btn" data-action="decrease" aria-label="Decrease count">&minus;</button>
 										<input type="number" class="input-quantity__field" id="productQuantity" name="product_quantity" value="1">
-										<button class="input-quantity__btn" data-action="increase">&plus;</button>
+										<button class="input-quantity__btn" data-action="increase" aria-label="Increase count">&plus;</button>
 									</div>
 								</div>
 								<button class="btn btn_secondary btn_hollow">Add to cart</button>
@@ -176,31 +177,36 @@
 								<p>A unisex basic garment with a loose fit. Light and comfortable to your skin.</p>
 								<p>Certification of cotton - GOTS</p>
 							</div>
-						</div>						
+						</div>
 						<div class="product-card__left">
-							<a class="product-card__photo-big" href="#">
+							<a class="product-card__photo-big" href="#" aria-label="Product photo">
 								<img class="product-card__photo-big-picture" src="images/photo1.jpg" srcset="images/photo1_x2.jpg 2x" alt="">
 							</a>
-							<div class="accordion" aria-label="Product info">
+
+							<section class="accordion" aria-label="Product info">
 								<div class="accordion__item">
-									<h2 id="productInfo1">
-										<button aria-controls="productInfo1Body" class="accordion__item-title" >Sizing & Fit</button>
+									<h2>
+										<button aria-controls="productInfo1Body" class="accordion__item-title" id="productInfo1" aria-expanded="false">Sizing & Fit</button>
 									</h2>
-									<div class="accordion__item-body">Olga is 175cm, she is wearing a size S.</div>
-								</div>
-								<div class="accordion__item">
-									<h2 id="productInfo2">
-										<button aria-controls="productInfo2Body" class="accordion__item-title">Composition & Care</button>
-									</h2>
-									<div class="accordion__item-body" id="productInfoBody2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</div>
+									<div role="region"
+                                         class="accordion__item-body"
+                                         id="productInfo1Body"
+                                         aria-labelledby="productInfo1">Olga is 175cm, she is wearing a size S.
+                                    </div>
 								</div>
 								<div class="accordion__item">
 									<h2>
-										<button type="button" aria-controls="productInfo3Body" class="accordion__item-title">Delivery & Returns</button>
+										<button aria-controls="productInfo2Body" class="accordion__item-title" id="productInfo2" aria-expanded="false">Composition & Care</button>
 									</h2>
-									<div class="accordion__item-body" id="productInfo3Body" aria-labelledby="productInfo3">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</div>
+									<div role="region" class="accordion__item-body" id="productInfo2Body" aria-labelledby="productInfo2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</div>
 								</div>
-							</div>
+								<div class="accordion__item">
+									<h2>
+										<button type="button" aria-controls="productInfo3Body" class="accordion__item-title" id="productInfo3 aria-expanded="false">Delivery & Returns</button>
+									</h2>
+									<div role="region" class="accordion__item-body" id="productInfo3Body" aria-labelledby="productInfo3">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</div>
+								</div>
+							</section>
 						</div>
 					</section>
 
@@ -221,20 +227,20 @@
 								<div class="products-grid__item-name"><a href="#">Product name</a></div>
 								<div class="colors-palette products-grid__item-colors-palette">
 									<div class="colors-palette__item">
-										<span class="colors-palette__sample" style="background-color: #C88252;" aria-label="orange">
-										</span>
+										<button class="colors-palette__sample" style="background-color: #C88252;" aria-label="orange" >
+										</button>
 									</div>
 									<div class="colors-palette__item">
-										<span class="colors-palette__sample" style="background-color: #e04acc;" aria-label="pink">
-										</span>
+										<button class="colors-palette__sample" style="background-color: #e04acc;" aria-label="pink">
+										</button>
 									</div>
 									<div class="colors-palette__item">
-										<span class="colors-palette__sample" style="background-color: #292fad;" aria-label="blue">
-										</span>
+										<button class="colors-palette__sample" style="background-color: #292fad;" aria-label="blue">
+										</button>
 									</div>
 									<div class="colors-palette__item">
-										<span class="colors-palette__sample" style="background-color: #68da00;" aria-label="green">
-										</span>
+										<button class="colors-palette__sample" style="background-color: #68da00;" aria-label="green">
+										</button>
 									</div>
 								</div>
 								<p class="products-grid__item-price">
@@ -248,16 +254,16 @@
 								<div class="products-grid__item-name"><a href="#">Very long product name for testing purposes</a></div>
 								<div class="colors-palette products-grid__item-colors-palette">
 									<div class="colors-palette__item">
-										<span class="colors-palette__sample" style="background-color: red;" aria-label="red">
-										</span>
+										<button class="colors-palette__sample" style="background-color: red;" aria-label="red">
+										</button>
 									</div>
 									<div class="colors-palette__item">
-										<span class="colors-palette__sample" style="background-color: green;" aria-label="green">
-										</span>
+										<button class="colors-palette__sample" style="background-color: green;" aria-label="green">
+										</button>
 									</div>
 									<div class="colors-palette__item">
-										<span class="colors-palette__sample" style="background-color: blue;" aria-label="blue">
-										</span>
+										<button class="colors-palette__sample" style="background-color: blue;" aria-label="blue">
+										</button>
 									</div>
 								</div>
 								<p class="products-grid__item-price">
@@ -274,20 +280,20 @@
 								<div class="products-grid__item-name"><a href="#">Product name</a></div>
 								<div class="colors-palette products-grid__item-colors-palette">
 									<div class="colors-palette__item">
-										<span class="colors-palette__sample" style="background-color: #C88252;" aria-label="orange">
-										</span>
+										<button class="colors-palette__sample" style="background-color: #C88252;" aria-label="orange">
+										</button>
 									</div>
 									<div class="colors-palette__item">
-										<span class="colors-palette__sample" style="background-color: #e04acc;" aria-label="pink">
-										</span>
+										<button class="colors-palette__sample" style="background-color: #e04acc;" aria-label="pink">
+										</button>
 									</div>
 									<div class="colors-palette__item">
-										<span class="colors-palette__sample" style="background-color: #292fad;" aria-label="blue">
-										</span>
+										<button class="colors-palette__sample" style="background-color: #292fad;" aria-label="blue">
+										</button>
 									</div>
 									<div class="colors-palette__item">
-										<span class="colors-palette__sample" style="background-color: #68da00;" aria-label="green">
-										</span>
+										<button class="colors-palette__sample" style="background-color: #68da00;" aria-label="green">
+										</button>
 									</div>
 								</div>
 								<p class="products-grid__item-price">
@@ -295,7 +301,7 @@
 								</p>
 							</div>
 
-						</div>						
+						</div>
 					</section>
 				</div>
 			</main>
@@ -315,7 +321,7 @@
 												<path fill-rule="evenodd" clip-rule="evenodd" d="M9.02694 9.9817H6.42882V19.5H2.49245V9.9817H0.6203V6.63659H2.49245V4.47193C2.49245 2.92396 3.22776 0.5 6.46386 0.5L9.37967 0.512199V3.7592H7.26406C6.91704 3.7592 6.42908 3.93258 6.42908 4.671V6.63971H9.37084L9.02694 9.9817Z" fill="#5E626B"/>
 											</svg>
 										</a>
-									</li>							
+									</li>
 									<li class="social__item">
 										<a class="social__link" href="#" target="_blank" aria-label="Instagram">
 											<svg class="social__logo" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -336,20 +342,20 @@
 									<li class="footer__list-item">
 										<a class="footer__list-link" href="#">Men</a>
 									</li>
-									<li class="footer__list-item">							
+									<li class="footer__list-item">
 										<a class="footer__list-link" href="#">Kids</a>
 									</li>
-									<li class="footer__list-item">							
+									<li class="footer__list-item">
 										<a class="footer__list-link" href="#">About Us</a>
 									</li>
-									<li class="footer__list-item">							
+									<li class="footer__list-item">
 										<a class="footer__list-link" href="#">Our Materials</a>
 									</li>
-								</ul>								
+								</ul>
 							</nav>
 						</section>
-						<section class="footer__col">
-							<div class="footer__heading">Useful links</div>
+						<section class="footer__col" aria-labelledby="footerUsefulLinks">
+							<div class="footer__heading" id="footerUsefulLinks">Useful links</div>
 							<div>
 								<ul class="footer__list">
 									<li class="footer__list-item">
@@ -358,16 +364,16 @@
 									<li class="footer__list-item">
 										<a class="footer__list-link" href="#">Shipping Policy</a>
 									</li>
-									<li class="footer__list-item">							
+									<li class="footer__list-item">
 										<a class="footer__list-link" href="#">Return & Refund Policy</a>
 									</li>
-									<li class="footer__list-item">							
+									<li class="footer__list-item">
 										<a class="footer__list-link" href="#">Terms of Service</a>
 									</li>
-									<li class="footer__list-item">							
+									<li class="footer__list-item">
 										<a class="footer__list-link" href="#">Contact Us</a>
 									</li>
-								</ul>									
+								</ul>
 							</div>
 						</section>
 						<section class="footer__col">
