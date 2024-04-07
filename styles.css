@@ -1100,3 +1100,16 @@ fieldset legend {
   width: auto;
   height: auto;
 }
+
+.size-guide-button {
+  text-decoration: underline;
+  margin-top: 1em;
+}
+
+.modal-close-button {
+  background: none;
+  border-width: 1px;
+  border-style: solid;
+  border-color: var(--border-color-light);
+  color: var(--text-color-primary);
+}

@@ -77,10 +77,10 @@
 										<option value="xl">XL</option>
 									</select>
 									<div><button class="size-guide-button modal-target">Size Guide</button></div>
-									<div class="modal">
+									<div class="modal" role="dialog" aria-labelledby="modalLabel" aria-modal="true" tabindex="-1">
 										<div class="modal-backdrop">
-											<div class="modal-body size-guide">
-												<h3 class="heading-2">Size guide</h3>
+											<section class="modal-body size-guide">
+												<h3 class="heading-2" id="modalLabel">Size guide</h3>
 												<p>Some description about the sizes</p>
 												<table class="size-guide__table">
 													<tr>
@@ -104,7 +104,9 @@
 														<td>11</td>
 													</tr>
 												</table>
-											</div>
+
+                                                <button class="modal-close-button">Close</button>
+											</section>
 										</div>
 
 									</div>
@@ -202,7 +204,7 @@
 								</div>
 								<div class="accordion__item">
 									<h2>
-										<button type="button" aria-controls="productInfo3Body" class="accordion__item-title" id="productInfo3 aria-expanded="false">Delivery & Returns</button>
+										<button type="button" aria-controls="productInfo3Body" class="accordion__item-title" id="productInfo3" aria-expanded="false">Delivery & Returns</button>
 									</h2>
 									<div role="region" class="accordion__item-body" id="productInfo3Body" aria-labelledby="productInfo3">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</div>
 								</div>
