@@ -66,7 +66,7 @@
 							<h1 class="product-card__title" id="productName">White unisex t-shirt</h1>
 							<p class="product-card__price">EUR 40</p>
 							<p class="product-card__infolabel">Tax included</p>
-							<form class="product-card__form">
+							<form class="product-card__form" action="#">
 								<div class="product-card__parameter">
 									<label  for="productSize" class="product-card__label">Size</label>
 									<select class="product-size" id="productSize">
@@ -221,8 +221,8 @@
 
 					<section class="section products-similar" aria-labelledby="labelProductsSimilar">
 						<h2 class="heading-2 products-similar__heading-2" id="labelProductsSimilar">You may also like</h2>
-						<div class="products-grid">
-							<div class="products-grid__item">
+						<ul class="products-grid">
+							<li class="products-grid__item">
 								<a href="#" tabindex="-1" class="products-grid__item-photo" aria-hidden="true">
 									<img src="images/photo2.jpg" class="products-grid__item-picture" srcset="images/photo2_x2.jpg 2x" alt="">
 								</a>
@@ -248,8 +248,8 @@
 								<p class="products-grid__item-price">
 									EUR 40
 								</p>
-							</div>
-							<div class="products-grid__item">
+							</li>
+							<li class="products-grid__item">
 								<a href="#" tabindex="-1" class="products-grid__item-photo" aria-hidden="true">
 									<img src="images/photo3.jpg" class="products-grid__item-picture" srcset="images/photo3_x2.jpg 2x" alt="">
 								</a>
@@ -271,8 +271,8 @@
 								<p class="products-grid__item-price">
 									EUR 40
 								</p>
-							</div>
-							<div class="products-grid__item">
+							</li>
+							<li class="products-grid__item">
 								<ul class="product-tags products-grid__item-product-tags">
 									<li class="product-tags__item">Sold out</li>
 								</ul>
@@ -301,9 +301,8 @@
 								<p class="products-grid__item-price">
 									EUR 40
 								</p>
-							</div>
-
-						</div>
+							</li>
+						</ul>
 					</section>
 				</div>
 			</main>
@@ -382,12 +381,10 @@
 							<div class="footer__heading">Subscribe</div>
 							<form class="form" action="#">
 								<div class="form__input-group">
-								<input class="input" type="email" name="email" id="email" placeholder="Email" aria-label="Email" required>
-								<button class="btn btn_primary">Subscribe</button>
-								</div>
-								<div class="form__input-group">
+									<input class="input" type="email" name="email" id="email" placeholder="Email" aria-label="Email" required>
 									<input class="checkbox" type="checkbox" name="agree" id="agree" required><label for="agree">I agree to give you all my data</label>
 								</div>
+								<button class="btn btn_primary">Subscribe</button>
 							</form>
 						</section>
 					</div>
